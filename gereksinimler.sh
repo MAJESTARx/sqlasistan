@@ -10,6 +10,7 @@ if [ "$EUID" -ne 0 ]
  echo -e "\033[1;31m  Şunu Yazın  : sudo bash gereksinimler.sh \033[4;34m"
   exit
 fi 
+chmod 777 sqlasistan
 cp sqlasistan /bin 
 ls /bin | grep sqlmap >> /dev/null 
 if [ "$?" != 0 ];then
